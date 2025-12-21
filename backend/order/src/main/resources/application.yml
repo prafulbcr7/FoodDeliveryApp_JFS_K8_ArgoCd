@@ -1,0 +1,17 @@
+server:
+  port: 9094
+
+spring:
+  application:
+    name: ORDER-SERVICE
+
+  profiles:
+    active: dev
+
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
