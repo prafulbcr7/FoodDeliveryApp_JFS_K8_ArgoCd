@@ -8,7 +8,7 @@ spring:
 
   datasource:
     url: jdbc:mysql://localhost:3306/foodcataloguedb
-    password: Neeraja309
+    password: root
     username: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
