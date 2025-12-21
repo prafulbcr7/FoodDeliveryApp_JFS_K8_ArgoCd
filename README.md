@@ -4,6 +4,8 @@
 
 A full-stack enterprice-grade food delivery application deployed on AWS EKS. This project utilizes **Spring Boot** for backend services, **Angular** for the frontend, and is containerised using **Docker** and orchestrated using **Kubernetes**.
 
+## Website Images
+
 ![Website Preview](images/website_pic1.png)
 
 ## Architecture Overview
@@ -22,8 +24,39 @@ The application is built using a microservices architecture with the following c
 
 ## 🛠️ Tech Stack
 
-*   **Frontend:** Angular, TypeScript, HTML/CSS
-*   **Backend:** Java 17, Spring Boot, Spring Cloud, Spring Data JPA
-*   **Databases:** MySQL (RDS), MongoDB (Atlas)
-*   **DevOps & Cloud:** Docker, Kubernetes (AWS EKS), AWS Application Load Balancer, ingress, ArgoCD
+### 🔙 Backend
+*   **Language:** Java 17, Java 21
+*   **Framework:** Spring Boot 3.5+
+*   **Microservices:** Spring Cloud - Netflix Eureka, OpenFeign, Config
+*   **Data Access:** Spring Data JPA - Hibernate, Spring Data MongoDB
+*   **API Documentation:** SpringDoc OpenAPI - Swagger UI
+*   **Utilities:** Lombok, MapStruct
+*   **Build Tool:** Maven
+
+### 🎨 Frontend
+*   **Framework:** Angular 19
+*   **Language:** TypeScript, JavaScript
+*   **Styling:** CSS3, SCSS, FontAwesome Icons, Google Fonts
+*   **State Management:** RxJS
+*   **Rendering:** Angular SSR (Server-Side Rendering)
+*   **Runtime:** Node.js
+
+### 🗄️ Database
+*   **Relational:** MySQL (AWS RDS)
+*   **NoSQL:** MongoDB (MongoDB Atlas Cloud)
+
+### ☁️ DevOps & Cloud Infrastructure
+*   **Cloud Provider:** Amazon Web Services (AWS)
+*   **Orchestration:** Kubernetes (AWS EKS - Elastic Kubernetes Service)
+*   **Containerization:** Docker, Docker Hub
+*   **Ingress:** AWS Application Load Balancer - ALB Controller
+*   **GitOps:** ArgoCD
+*   **Infrastructure as Code:** Eksctl, AWS CloudFormation
+*   **IAM:** AWS IAM Roles & Policies
+
+### ⚙️ Tools & IDEs
+*   **IDEs:** IntelliJ IDEA, Visual Studio Code
+*   **Version Control:** Git, GitHub
+*   **API Testing:** Postman
+
 
