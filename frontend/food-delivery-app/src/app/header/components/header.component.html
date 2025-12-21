@@ -1,0 +1,70 @@
+<header class="header">
+    <div class="header-container">
+        <div class="header-left">
+            <button class="hamburger-menu" 
+                    [class.active]="isSidebarOpen" 
+                    (click)="toggleSidebar()"
+                    aria-label="Toggle menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <button class="home-button" (click)="goHome()" aria-label="Go to home">
+                <i class="fa fa-home"></i>
+            </button>
+        </div>
+
+        <h1 class="header-logo">Creative Food Delivery Application</h1>
+        
+        <nav class="header-nav">
+            <div class="user-avatar">
+                <img [src]="userProfilePic" [alt]="username" class="avatar-img" (error)="onImageError($event)">
+                <span class="username">{{ username }}</span>
+            </div>
+        </nav>
+    </div>
+
+    <div class="sidebar-overlay" 
+         [class.active]="isSidebarOpen" 
+         (click)="closeSidebar()">
+    </div>
+
+    <aside class="sidebar" [class.active]="isSidebarOpen">
+        <div class="sidebar-header">
+            <h2 class="sidebar-title">Menu</h2>
+            <button class="close-btn" (click)="closeSidebar()" aria-label="Close menu">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a class="sidebar-link" (click)="goHome(); closeSidebar()">
+                <i class="fa fa-home"></i>
+                <span>Home</span>
+            </a>
+
+            <a href="#" class="sidebar-link" (click)="closeSidebar()">
+                <i class="fa fa-user-plus"></i>
+                <span>Sign up</span>
+            </a>
+            
+            <a href="#" class="sidebar-link" (click)="closeSidebar()">
+                <i class="fa fa-sign-in"></i>
+                <span>Log in</span>
+            </a>
+            
+            <div class="sidebar-divider"></div>
+            
+            <a href="#" class="sidebar-link" (click)="closeSidebar()">
+                <i class="fa fa-store"></i>
+                <span>Add Restaurant</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p class="sidebar-footer-text">Creative Food Delivery Application</p>
+            <p class="sidebar-version">v1.0.0</p>
+        </div>
+    </aside>
+</header>

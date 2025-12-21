@@ -1,0 +1,40 @@
+<div class="order-summary" *ngIf="obj">
+    <h1>Order Summary</h1>
+    <table>
+        <thead>
+            <tr> 
+                <th> Item Name </th>
+                <th> Quantity </th>
+                <th> Price </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of obj.foodItemList">
+                <td> {{ item.itemName }} </td>
+                <td> {{ item.quantity }} </td>
+                <td>&#x20b9; {{ item.price * item.quantity }} </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr> 
+                <td colspan="2"> Total </td>
+                <td>&#x20b9; {{ total }} </td>
+            </tr>
+        </tfoot>
+    </table>
+    <button class="checkout-button" (click)="placeOrder()"> Place Order </button>
+</div>
+
+<div class="order-summary" *ngIf="!obj">
+    <h1>No Items Selected</h1>
+    <p>Please go back and select some items to checkout.</p>
+    <button class="checkout-button" (click)="closeDialog()">Go Back</button>
+</div>
+
+<div class="dialog-container" *ngIf="showDialog">
+    <div class="dialog-box">
+        <h2> Order Placed Successfully! </h2>
+        <p> Your order has been placed. You will receive a confirmation email shortly. </p>
+        <button class="close-button" (click)="closeDialog()"> Close </button>
+    </div>
+</div>

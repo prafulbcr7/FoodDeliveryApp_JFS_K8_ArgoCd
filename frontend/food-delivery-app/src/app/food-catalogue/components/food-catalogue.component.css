@@ -1,0 +1,310 @@
+.restaurant-details {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: transparent;
+  min-height: calc(100vh - 80px);
+}
+
+.restaurant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eef0f2;
+}
+
+.restaurant-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0;
+}
+
+.checkout-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  background: #48bb78;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.checkout-button:hover {
+  background: #38a169;
+}
+
+.checkout-button:active {
+  background: #2f855a;
+}
+
+.checkout-button i {
+  font-size: 1rem;
+}
+
+.restaurant-details > p {
+  text-align: center;
+  color: #718096;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  padding: 1.25rem 1.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  border: 1px solid #eef0f2;
+}
+
+.restaurant-details h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 2rem 0 1.5rem;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.restaurant-details h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: #4299e1;
+  border-radius: 2px;
+}
+
+.food-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.food-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease;
+  border: 1px solid #eef0f2;
+}
+
+.food-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.food-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  flex: 1;
+}
+
+.food-name {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.food-price {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #48bb78;
+}
+
+.food-quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  background: #f7fafc;
+  padding: 0.375rem;
+  border-radius: 10px;
+  border: 1px solid #eef0f2;
+}
+
+.quantity-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d3748;
+  min-width: 32px;
+  text-align: center;
+}
+
+.plus-button,
+.minus-button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plus-button {
+  background: #4299e1;
+  color: white;
+}
+
+.plus-button:hover {
+  background: #3182ce;
+}
+
+.minus-button {
+  background: #ffffff;
+  color: #718096;
+  border: 1px solid #e2e8f0;
+}
+
+.minus-button:hover {
+  background: #fed7d7;
+  border-color: #feb2b2;
+  color: #c53030;
+}
+
+.loading-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+.loading-message p {
+  font-size: 1.125rem;
+  color: #4299e1;
+  font-weight: 500;
+  margin-top: 1.25rem;
+}
+
+.loading-message::before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #4299e1;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+.error-message p {
+  font-size: 1.125rem;
+  color: #e53e3e;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.error-message button {
+  padding: 0.75rem 1.75rem;
+  background: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.error-message button:hover {
+  background: #3182ce;
+}
+
+.food-list:empty::before {
+  content: 'No food items available';
+  display: block;
+  text-align: center;
+  padding: 3rem;
+  color: #a0aec0;
+  font-size: 1rem;
+  font-weight: 500;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #eef0f2;
+}
+
+@media (max-width: 768px) {
+  .restaurant-details {
+    padding: 1.25rem;
+  }
+
+  .restaurant-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding: 1.25rem;
+  }
+
+  .restaurant-header h1 {
+    font-size: 1.375rem;
+  }
+
+  .checkout-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .food-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .food-quantity {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .restaurant-details h2 {
+    font-size: 1.25rem;
+  }
+
+  .food-name {
+    font-size: 1rem;
+  }
+
+  .restaurant-details > p {
+    padding: 1rem;
+    font-size: 0.9375rem;
+  }
+}

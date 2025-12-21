@@ -1,0 +1,420 @@
+.order-summary {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 80px);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.order-summary h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.order-summary h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #4299e1, #48bb78);
+  border-radius: 2px;
+  animation: expandWidth 0.8s ease-out 0.3s both;
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60px;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+  animation: slideIn 0.5s ease-out 0.2s both;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+thead {
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+}
+
+thead tr th {
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+thead tr th:first-child {
+  border-radius: 16px 0 0 0;
+}
+
+thead tr th:last-child {
+  border-radius: 0 16px 0 0;
+  text-align: right;
+}
+
+thead tr th:nth-child(2) {
+  text-align: center;
+}
+
+tbody tr {
+  transition: all 0.3s ease;
+  animation: fadeInRow 0.5s ease-out both;
+}
+
+tbody tr:nth-child(1) { animation-delay: 0.3s; }
+tbody tr:nth-child(2) { animation-delay: 0.4s; }
+tbody tr:nth-child(3) { animation-delay: 0.5s; }
+tbody tr:nth-child(4) { animation-delay: 0.6s; }
+tbody tr:nth-child(5) { animation-delay: 0.7s; }
+
+@keyframes fadeInRow {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+tbody tr:hover {
+  background: #f7fafc;
+  transform: scale(1.01);
+}
+
+tbody tr:not(:last-child) {
+  border-bottom: 1px solid #eef0f2;
+}
+
+tbody tr td {
+  padding: 1.25rem 1.5rem;
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+tbody tr td:first-child {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+tbody tr td:nth-child(2) {
+  text-align: center;
+  font-weight: 500;
+}
+
+tbody tr td:last-child {
+  text-align: right;
+  font-weight: 600;
+  color: #48bb78;
+}
+
+tfoot {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+}
+
+tfoot tr td {
+  padding: 1.25rem 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+tfoot tr td:first-child {
+  text-align: left;
+}
+
+tfoot tr td:last-child {
+  text-align: right;
+  color: #4299e1;
+  font-size: 1.25rem;
+}
+
+/* Checkout Button */
+.checkout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(72, 187, 120, 0.4);
+  animation: pulse 2s infinite, fadeInUp 0.5s ease-out 0.6s both;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(72, 187, 120, 0.4);
+  }
+  50% {
+    box-shadow: 0 6px 25px rgba(72, 187, 120, 0.6);
+  }
+}
+
+.checkout-button:hover {
+  background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(72, 187, 120, 0.5);
+}
+
+.checkout-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(72, 187, 120, 0.4);
+}
+
+.dialog-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+  backdrop-filter: blur(4px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dialog-box {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  animation: scaleIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.dialog-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #48bb78, #4299e1, #48bb78);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.dialog-box h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #48bb78;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dialog-box h2::before {
+  content: '✓';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  animation: checkmark 0.5s ease-out 0.3s both;
+}
+
+@keyframes checkmark {
+  from {
+    transform: scale(0) rotate(-45deg);
+  }
+  to {
+    transform: scale(1) rotate(0);
+  }
+}
+
+.dialog-box p {
+  font-size: 1rem;
+  color: #718096;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.close-button {
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(66, 153, 225, 0.4);
+}
+
+.close-button:hover {
+  background: linear-gradient(135deg, #3182ce 0%, #2b6cb0 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(66, 153, 225, 0.5);
+}
+
+.close-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .order-summary {
+    padding: 1.25rem;
+  }
+
+  .order-summary h1 {
+    font-size: 1.5rem;
+  }
+
+  thead tr th,
+  tbody tr td,
+  tfoot tr td {
+    padding: 1rem;
+    font-size: 0.875rem;
+  }
+
+  tfoot tr td:last-child {
+    font-size: 1.1rem;
+  }
+
+  .checkout-button {
+    max-width: 100%;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .dialog-box {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+  }
+
+  .dialog-box h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  table {
+    font-size: 0.8rem;
+  }
+
+  thead tr th,
+  tbody tr td,
+  tfoot tr td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  thead tr th:first-child,
+  tbody tr td:first-child {
+    max-width: 120px;
+    word-wrap: break-word;
+  }
+}
+
+.checkout-button:focus,
+.close-button:focus {
+  outline: 2px solid #4299e1;
+  outline-offset: 2px;
+}
+
+.checkout-button:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
+  animation: none;
+  box-shadow: none;
+}
+
+.checkout-button:disabled:hover {
+  transform: none;
+}

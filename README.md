@@ -27,9 +27,9 @@ The application is built using a microservices architecture with the following c
 ### Frontend (Angular)
 *   **Food Delivery App:** A responsive web interface for users to browse restaurants and place orders.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-### 🔙 Backend
+### Backend
 *   **Language:** Java 17, Java 21
 *   **Framework:** Spring Boot 3.5+
 *   **Microservices:** Spring Cloud - Netflix Eureka, OpenFeign, Config
@@ -38,7 +38,7 @@ The application is built using a microservices architecture with the following c
 *   **Utilities:** Lombok, MapStruct
 *   **Build Tool:** Maven
 
-### 🎨 Frontend
+### Frontend
 *   **Framework:** Angular 19
 *   **Language:** TypeScript, JavaScript
 *   **Styling:** CSS3, SCSS, FontAwesome Icons, Google Fonts
@@ -46,11 +46,11 @@ The application is built using a microservices architecture with the following c
 *   **Rendering:** Angular SSR (Server-Side Rendering)
 *   **Runtime:** Node.js
 
-### 🗄️ Database
+### Database
 *   **Relational:** MySQL (AWS RDS)
 *   **NoSQL:** MongoDB (MongoDB Atlas Cloud)
 
-### ☁️ DevOps & Cloud Infrastructure
+### DevOps & Cloud Infrastructure
 *   **Cloud Provider:** Amazon Web Services (AWS)
 *   **Orchestration:** Kubernetes (AWS EKS - Elastic Kubernetes Service)
 *   **Containerization:** Docker, Docker Hub
@@ -59,7 +59,7 @@ The application is built using a microservices architecture with the following c
 *   **Infrastructure as Code:** Eksctl, AWS CloudFormation
 *   **IAM:** AWS IAM Roles & Policies
 
-### ⚙️ Tools & IDEs
+### Tools & IDEs
 *   **IDEs:** IntelliJ IDEA, Visual Studio Code
 *   **Version Control:** Git, GitHub
 *   **API Testing:** Postman
