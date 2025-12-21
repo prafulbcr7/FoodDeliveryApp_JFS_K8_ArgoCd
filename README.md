@@ -4,6 +4,11 @@
 
 A full-stack enterprice-grade food delivery application deployed on AWS EKS. This project utilizes **Spring Boot** for backend services, **Angular** for the frontend, and is containerised using **Docker** and orchestrated using **Kubernetes**.
 
+## Architecture Diagrams
+![Website Preview](images/arch-diagram.png)
+
+![Website Preview](images/argoCD.png)
+
 ## Website Images
 
 ![Website Preview](images/website_pic1.png)
